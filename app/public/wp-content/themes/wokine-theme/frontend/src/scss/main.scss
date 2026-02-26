@@ -60,6 +60,11 @@ button {
 }
 //
 
+a,
+button {
+  cursor: pointer;
+}
+
 // Hide admin bar
 #wpadminbar {
   display: none !important;
@@ -71,6 +76,13 @@ body.admin-bar {
   margin-top: 0 !important;
 }
 //
+
+.text-gradient {
+  background: linear-gradient(90deg, #000e2b, #02399f, #000e2b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 @import "hero";
 @import "intro";
