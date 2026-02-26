@@ -16,7 +16,8 @@
 <body <?php body_class(); ?>>
 
     <?php get_template_part('hero'); ?>
-
+    <?php get_template_part('intro'); ?>
+    <?php get_template_part('solutions'); ?>
     <!-- <?php
     if (have_posts()) :
         while (have_posts()) : the_post();
