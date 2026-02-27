@@ -17,7 +17,7 @@ export default defineConfig(({ command }) => ({
   server: {
     port: 5173,
     strictPort: true,
-    origin: "http://wokine-test.local",
+    origin: "http://localhost:5173",
     cors: {
       origin: "http://wokine-test.local",
     },

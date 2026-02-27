@@ -7,7 +7,7 @@
     <div class="products-cards-container">
       <div class="products-card">
         <div class="products-image-container">
-          <img class="products-image" src="/wp-content/themes/wokine-theme/frontend/src/assets/images/product-1.png" alt="">
+          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
           <p class="products-new">nouveauté</p>
         </div>
         <div class="products-card-content">
@@ -17,7 +17,7 @@
       </div>
       <div class="products-card">
         <div class="products-image-container">
-          <img class="products-image" src="/wp-content/themes/wokine-theme/frontend/src/assets/images/product-1.png" alt="">
+          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
           <p class="products-new">nouveauté</p>
         </div>
         <div class="products-card-content">
@@ -27,7 +27,7 @@
       </div>
       <div class="products-card">
         <div class="products-image-container">
-          <img class="products-image" src="/wp-content/themes/wokine-theme/frontend/src/assets/images/product-1.png" alt="">
+          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
           <p class="products-new">nouveauté</p>
         </div>
         <div class="products-card-content">
@@ -37,7 +37,7 @@
       </div>
       <div class="products-card">
         <div class="products-image-container">
-          <img class="products-image" src="/wp-content/themes/wokine-theme/frontend/src/assets/images/product-1.png" alt="">
+          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
           <p class="products-new">nouveauté</p>
         </div>
         <div class="products-card-content">
@@ -47,7 +47,7 @@
       </div>
       <div class="products-card">
         <div class="products-image-container">
-          <img class="products-image" src="/wp-content/themes/wokine-theme/frontend/src/assets/images/product-1.png" alt="">
+          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
           <p class="products-new">nouveauté</p>
         </div>
         <div class="products-card-content">

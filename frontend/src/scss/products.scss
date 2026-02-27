@@ -5,18 +5,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .products-container {
+  position: absolute;
+  inset: 6px;
   background-color: #ebf2f6;
   border-radius: 24px;
-  padding: 6px;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
   gap: 72px;
+  box-sizing: border-box;
 }
 
 .products-header {

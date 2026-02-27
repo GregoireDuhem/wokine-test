@@ -11,8 +11,11 @@ add_action('after_setup_theme', 'wokine_theme_setup');
 // Dev ou prod ?
 function wokine_is_vite_dev()
 {
-  // add_filter('show_admin_bar', '__return_false');
-  return defined('WP_ENV') && WP_ENV === 'development';
+  if (defined('WP_ENV') && WP_ENV === 'development') {
+    return true;
+  }
+  $manifest_path = get_stylesheet_directory() . '/frontend/dist/manifest.json';
+  return !file_exists($manifest_path);
 }
 
 // Enqueue des assets

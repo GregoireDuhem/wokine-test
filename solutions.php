@@ -1,6 +1,6 @@
 <section class="solutions">
   <div class="solutions-image-container">
-    <img class="solutions-image" src="/wp-content/themes/wokine-theme/frontend/src/assets/images/solutions-bg.png" alt="Solutions bg">
+    <img class="solutions-image" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/frontend/src/assets/images/solutions-bg.png" alt="Solutions bg">
   </div>
   <div class="solutions-content">
     <h3 class="solutions-title text-gradient">Des solutions techniques complètes pour tous vos projets</h3>
@@ -15,7 +15,7 @@
       <div class="card-2-3-container">
         <div class="card-2">
           <div class="card-2-image-container">
-            <img class="card-2-image" src="/wp-content/themes/wokine-theme/frontend/src/assets/images/solution-card.png" alt="Solution card">
+            <img class="card-2-image" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/frontend/src/assets/images/solution-card.png" alt="Solution card">
           </div>
           <div class="card-2-content">
             <h4 class="card-2-3-title">Sed sollicitudin malesuada gravida</h4>
