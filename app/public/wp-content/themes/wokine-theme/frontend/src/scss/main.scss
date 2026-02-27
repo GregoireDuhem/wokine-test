@@ -20,6 +20,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Satoshi-regular";
+  src:
+    url("/wp-content/themes/wokine-theme/frontend/src/assets/fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("/wp-content/themes/wokine-theme/frontend/src/assets/fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 $color-blue: #0c4b78;
 $color-white: #ffffff;
 $color-black: #000e2b;
@@ -87,3 +97,4 @@ body.admin-bar {
 @import "hero";
 @import "intro";
 @import "solutions";
+@import "products";

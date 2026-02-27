@@ -12,6 +12,23 @@
         </div>
         <a class="card-1-button">Voir plus</a>
       </div>
+      <div class="card-2-3-container">
+        <div class="card-2">
+          <div class="card-2-image-container">
+            <img class="card-2-image" src="/wp-content/themes/wokine-theme/frontend/src/assets/images/solution-card.png" alt="Solution card">
+          </div>
+          <div class="card-2-content">
+            <h4 class="card-2-3-title">Sed sollicitudin malesuada gravida</h4>
+          </div>
+          <a class="card-2-button">Voir plus</a>
+        </div>
+        <div class="card-3">
+          <div class="card-3-content">
+            <h4 class="card-2-3-title">A hendrerit tincidunt elementum a</h4>
+          </div>
+          <a class="card-3-button">Voir plus</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
