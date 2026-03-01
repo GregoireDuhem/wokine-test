@@ -49,3 +49,32 @@
   line-height: 100%;
   //   letter-spacing: -0.02em; visual adjustment so not using it
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .hero-image-container {
+    padding: 4px;
+    &::after {
+      margin: 4px;
+      border-radius: 16px;
+    }
+  }
+
+  .hero-image {
+    border-radius: 16px;
+  }
+
+  .hero-content {
+    gap: 32px;
+    padding: 0 24px;
+  }
+
+  .hero-content img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    max-width: 100%;
+  }
+}

@@ -2,8 +2,7 @@
 
 @font-face {
   font-family: "Satoshi";
-  src:
-    url("../assets/fonts/Satoshi-Medium.woff2") format("woff2"),
+  src: url("../assets/fonts/Satoshi-Medium.woff2") format("woff2"),
     url("../assets/fonts/Satoshi-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -12,8 +11,7 @@
 
 @font-face {
   font-family: "Satoshi-bold";
-  src:
-    url("../assets/fonts/Satoshi-Bold.woff2") format("woff2"),
+  src: url("../assets/fonts/Satoshi-Bold.woff2") format("woff2"),
     url("../assets/fonts/Satoshi-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -22,8 +20,7 @@
 
 @font-face {
   font-family: "Satoshi-regular";
-  src:
-    url("../assets/fonts/Satoshi-Regular.woff2") format("woff2"),
+  src: url("../assets/fonts/Satoshi-Regular.woff2") format("woff2"),
     url("../assets/fonts/Satoshi-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -33,6 +30,9 @@
 $color-blue: #0c4b78;
 $color-white: #ffffff;
 $color-black: #000e2b;
+
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1024px;
 
 html,
 body {
