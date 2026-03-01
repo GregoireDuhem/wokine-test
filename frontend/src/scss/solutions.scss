@@ -27,6 +27,8 @@
   padding: 80px 0 80px 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 60px;
 }
 
@@ -46,6 +48,7 @@
   justify-content: center;
   gap: 16px;
   padding: 0 232px 0 232px;
+  max-width: 964px;
 }
 
 .card-1 {
@@ -57,7 +60,6 @@
   justify-content: space-between;
   gap: 24px;
   color: #ebf2f6;
-  max-width: 964px;
   height: 225px;
 }
 
@@ -86,7 +88,43 @@
   font-size: 16px;
   line-height: 150%;
   color: #ebf2f6;
-  text-decoration: underline;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-1-button-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-1-button .icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.card-2-button,
+.card-3-button {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-2-3-button-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-2-button .icon,
+.card-3-button .icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
 }
 
 .card-2 {
@@ -143,6 +181,7 @@
   flex-direction: row;
   gap: 16px;
   width: 100%;
+  max-width: 964px;
 }
 
 .card-2-3-title {
@@ -150,4 +189,18 @@
   font-size: 32px;
   line-height: 120%;
   letter-spacing: -0.04em;
+}
+
+.underline {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ebf2f6;
+  margin-top: 2px;
+  border: none;
+  padding: 0;
+}
+
+.card-3 .underline {
+  background-color: $color-black;
 }

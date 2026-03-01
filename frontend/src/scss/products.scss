@@ -98,17 +98,57 @@
 
 .products-cards-container {
   display: flex;
+  cursor: pointer;
   flex-direction: row;
   gap: 24px;
   justify-content: flex-start;
   padding: 0 114px;
   overflow-x: auto;
   -ms-overflow-style: none;
+  user-select: none;
   &::-webkit-scrollbar {
     display: none;
   }
-  cursor: grab;
+  img {
+    -webkit-user-drag: none;
+  }
 }
 .products-cards-container:active {
   cursor: grabbing;
+}
+
+.products-arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 0 114px 0 114px;
+}
+
+.products-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: $color-black;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.products-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.products-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+.opacity {
+  opacity: 0.5;
 }
