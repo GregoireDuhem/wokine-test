@@ -1,0 +1,67 @@
+.intro {
+  padding: 120px 120px 120px 120px;
+  font-family: "Satoshi";
+}
+
+.intro-content {
+  display: flex;
+
+  flex-direction: row;
+  gap: 60px;
+}
+
+.intro-title {
+  font-family: "Satoshi-bold";
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  width: 50%;
+}
+
+.intro-text-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: $color-black;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+button {
+  background-color: $color-blue;
+  font-size: 14px;
+  color: $color-white;
+  width: fit-content;
+  padding: 16px 28px;
+  line-height: 22px;
+  border-radius: 100px;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .intro {
+    padding: 48px 24px;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .intro-title {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro-text-container {
+    width: 100%;
+    gap: 20px;
+    line-height: 120%;
+    font-size: 16px;
+  }
+
+  .intro-button {
+    align-self: center;
+  }
+}

@@ -1,0 +1,285 @@
+.solutions {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.solutions-image-container {
+  position: absolute;
+  inset: 0;
+  padding: 6px;
+  z-index: -1;
+}
+
+.solutions-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px 24px 24px 24px;
+}
+
+.solutions-content {
+  z-index: 1;
+  position: relative;
+  padding: 80px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.solutions-title {
+  font-family: "Satoshi-bold";
+  font-size: 48px;
+  text-align: center;
+  line-height: 120%;
+  letter-spacing: -0.04em;
+  padding: 0 300px 0 300px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 232px 0 232px;
+  max-width: 964px;
+}
+
+.card-1 {
+  background-color: #000e2b;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  color: #ebf2f6;
+  height: 225px;
+}
+
+.card-1-content {
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+}
+
+.card-1-title {
+  font-family: "Anton";
+  text-transform: uppercase;
+  font-size: 52px;
+  line-height: 110%;
+  letter-spacing: -0.04em;
+}
+
+.card-1-text {
+  font-family: "Satoshi";
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.card-1-button {
+  font-family: "Satoshi";
+  font-size: 16px;
+  line-height: 150%;
+  color: #ebf2f6;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-1-button-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-1-button .icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.card-2-button,
+.card-3-button {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-2-3-button-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-2-button .icon,
+.card-3-button .icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.card-2 {
+  border-radius: 16px;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  color: #ebf2f6;
+  width: 50%;
+  height: 180px;
+}
+
+.card-2-image-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: -1;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #000e2b80;
+    border-radius: 16px;
+    pointer-events: none;
+  }
+}
+
+.card-2-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px 16px 16px 16px;
+}
+
+.card-3 {
+  background-color: #e98ce3;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  color: $color-black;
+  width: 50%;
+  height: 180px;
+}
+
+.card-2-3-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  max-width: 964px;
+}
+
+.card-2-3-title {
+  font-family: "Satoshi";
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.04em;
+}
+
+.underline {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ebf2f6;
+  margin-top: 2px;
+  border: none;
+  padding: 0;
+}
+
+.card-3 .underline {
+  background-color: $color-black;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .solutions-image-container {
+    padding: 4px;
+  }
+
+  .solutions-image {
+    border-radius: 16px;
+  }
+
+  .solutions-content {
+    padding: 40px 0 48px;
+    gap: 40px;
+  }
+
+  .solutions-title {
+    font-size: 28px;
+    padding: 0 24px;
+  }
+
+  .card-container {
+    padding: 0 24px;
+    gap: 12px;
+  }
+
+  .card-1 {
+    padding: 24px;
+    height: auto;
+    gap: 16px;
+  }
+
+  .card-1-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card-1-title {
+    font-size: 32px;
+  }
+
+  .card-1-text {
+    font-size: 14px;
+  }
+
+  .card-2-3-container {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-2,
+  .card-3 {
+    width: 100%;
+    height: 220px;
+    padding: 24px;
+    gap: 16px;
+    box-sizing: border-box;
+  }
+
+  .card-2-3-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 48px 0 48px;
+  }
+
+  .solutions-title {
+    padding: 0 48px 0 48px;
+  }
+}
