@@ -3,7 +3,7 @@ import path from "path";
 
 export default defineConfig(({ command }) => ({
   root: "src",
-  base: command === "serve" ? "/" : "/wp-content/themes/wokine-theme/frontend/dist/",
+  base: command === "serve" ? "/" : "/wp-content/themes/wokine-test/frontend/dist/",
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,

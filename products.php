@@ -5,56 +5,60 @@
       <button>Tous nos produits</button>
     </div>
     <div class="products-cards-container">
-      <div class="products-card">
-        <div class="products-image-container">
-          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
-          <p class="products-new">nouveauté</p>
+      <?php
+      // On récupère les posts de type "produit" publiés (ordre par date)
+      $produits_query = new WP_Query([
+        'post_type'      => 'produit',
+        'posts_per_page' => -1,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+        'post_status'    => 'publish',
+      ]);
+
+      if ($produits_query->have_posts()) :
+        while ($produits_query->have_posts()) :
+          $produits_query->the_post();
+
+          $image       = get_field('produit_image');
+          $description = get_field('produit_description');
+          $label       = get_field('produit_label');
+          $image_url   = is_array($image) && !empty($image['url']) ? $image['url'] : '';
+          $image_alt   = is_array($image) && !empty($image['alt']) ? $image['alt'] : get_the_title();
+      ?>
+          <div class="products-card">
+            <div class="products-image-container">
+              <?php if ($image_url) : ?>
+                <img class="products-image" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+              <?php else : ?>
+                <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/public/assets/images/solution-card.webp" alt="">
+              <?php endif; ?>
+              <?php if ($label) : ?>
+                <p class="products-new"><?php echo esc_html($label); ?></p>
+              <?php endif; ?>
+            </div>
+            <div class="products-card-content">
+              <p class="products-card-title"><?php the_title(); ?></p>
+              <?php if ($description) : ?>
+                <p class="products-card-text"><?php echo esc_html($description); ?></p>
+              <?php endif; ?>
+            </div>
+          </div>
+        <?php
+        endwhile;
+        wp_reset_postdata();
+      else :
+        ?>
+        <div class="products-card">
+          <div class="products-image-container">
+            <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/public/assets/images/solution-card.webp" alt="">
+            <p class="products-new">nouveauté</p>
+          </div>
+          <div class="products-card-content">
+            <p class="products-card-title">Vehicula dapibus</p>
+            <p class="products-card-text">Tristique cras interdum volutpat faucibus viverra cursus id. Orci blandit nunc nibh arcu non sit volutpat. Vitae id ut dui tellus.</p>
+          </div>
         </div>
-        <div class="products-card-content">
-          <p class="products-card-title">Vehicula dapibus</p>
-          <p class="products-card-text">Tristique cras interdum volutpat faucibus viverra cursus id. Orci blandit nunc nibh arcu non sit volutpat. Vitae id ut dui tellus.</p>
-        </div>
-      </div>
-      <div class="products-card">
-        <div class="products-image-container">
-          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
-          <p class="products-new">nouveauté</p>
-        </div>
-        <div class="products-card-content">
-          <p class="products-card-title">Vehicula dapibus</p>
-          <p class="products-card-text">Tristique cras interdum volutpat faucibus viverra cursus id. Orci blandit nunc nibh arcu non sit volutpat. Vitae id ut dui tellus.</p>
-        </div>
-      </div>
-      <div class="products-card">
-        <div class="products-image-container">
-          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
-          <p class="products-new">nouveauté</p>
-        </div>
-        <div class="products-card-content">
-          <p class="products-card-title">Vehicula dapibus</p>
-          <p class="products-card-text">Tristique cras interdum volutpat faucibus viverra cursus id. Orci blandit nunc nibh arcu non sit volutpat. Vitae id ut dui tellus.</p>
-        </div>
-      </div>
-      <div class="products-card">
-        <div class="products-image-container">
-          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
-          <p class="products-new">nouveauté</p>
-        </div>
-        <div class="products-card-content">
-          <p class="products-card-title">Vehicula dapibus</p>
-          <p class="products-card-text">Tristique cras interdum volutpat faucibus viverra cursus id. Orci blandit nunc nibh arcu non sit volutpat. Vitae id ut dui tellus.</p>
-        </div>
-      </div>
-      <div class="products-card">
-        <div class="products-image-container">
-          <img class="products-image" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/frontend/src/assets/images/product-1.png" alt="">
-          <p class="products-new">nouveauté</p>
-        </div>
-        <div class="products-card-content">
-          <p class="products-card-title">Vehicula dapibus</p>
-          <p class="products-card-text">Tristique cras interdum volutpat faucibus viverra cursus id. Orci blandit nunc nibh arcu non sit volutpat. Vitae id ut dui tellus.</p>
-        </div>
-      </div>
+      <?php endif; ?>
     </div>
     <div class="products-arrows">
       <button type="button" class="products-arrow products-arrow-right" aria-label="Suivant">
@@ -74,4 +78,5 @@
         </svg>
       </button>
     </div>
+  </div>
 </section>

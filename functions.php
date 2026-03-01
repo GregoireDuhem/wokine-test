@@ -94,3 +94,91 @@ function wokine_add_module_type_to_vite_scripts($tag, $handle, $src)
   return $tag;
 }
 add_filter('script_loader_tag', 'wokine_add_module_type_to_vite_scripts', 10, 3);
+
+// =============================================================================
+// ÉTAPE 1 : Custom Post Type "Produits"
+// =============================================================================
+// Un "Custom Post Type" (CPT) = un type de contenu dans WordPress.
+// Par défaut WP a "Posts" et "Pages". Ici on ajoute "Produits".
+// Quand on enregistre un CPT, WordPress crée un menu dans l'admin pour gérer ces contenus.
+
+function wokine_register_produits_post_type()
+{
+  // Labels = textes affichés dans l'admin (ex: "Ajouter un Produit")
+  $labels = [
+    'name'               => 'Produits',
+    'singular_name'      => 'Produit',
+    'menu_name'          => 'Produits',
+    'add_new'            => 'Ajouter un produit',
+    'add_new_item'       => 'Ajouter un nouveau produit',
+    'edit_item'          => 'Modifier le produit',
+    'new_item'           => 'Nouveau produit',
+    'view_item'          => 'Voir le produit',
+    'search_items'       => 'Rechercher des produits',
+    'not_found'          => 'Aucun produit trouvé',
+    'not_found_in_trash' => 'Aucun produit dans la corbeille',
+  ];
+
+  // Options du CPT (ce qui est affiché, comportement, etc.)
+  $args = [
+    'labels'              => $labels,
+    'public'              => true,
+    'has_archive'         => false,
+    'menu_icon'           => 'dashicons-cart',
+    'supports'            => ['title'],
+    'show_in_rest'        => true,
+    'capability_type'     => 'post',
+  ];
+
+  register_post_type('produit', $args);
+}
+
+add_action('init', 'wokine_register_produits_post_type');
+
+// ÉTAPE 2 : Champs ACF pour "Produits" (nécessite le plugin ACF activé)
+function wokine_register_produits_acf_fields()
+{
+  if (!function_exists('acf_add_local_field_group')) {
+    return;
+  }
+
+  acf_add_local_field_group([
+    'key'   => 'group_produit',
+    'title' => 'Détails du produit',
+    'fields' => [
+      [
+        'key'           => 'field_produit_image',
+        'label'         => 'Image',
+        'name'          => 'produit_image',
+        'type'          => 'image',
+        'return_format' => 'array',
+        'preview_size'  => 'medium',
+      ],
+      [
+        'key'   => 'field_produit_description',
+        'label' => 'Description',
+        'name'  => 'produit_description',
+        'type'  => 'textarea',
+        'rows'  => 4,
+      ],
+      [
+        'key'         => 'field_produit_label',
+        'label'       => 'Label',
+        'name'        => 'produit_label',
+        'type'        => 'text',
+        'placeholder' => 'ex: nouveauté',
+      ],
+    ],
+    'location' => [
+      [
+        [
+          'param'    => 'post_type',
+          'operator' => '==',
+          'value'    => 'produit',
+        ],
+      ],
+    ],
+  ]);
+}
+
+add_action('acf/init', 'wokine_register_produits_acf_fields');
