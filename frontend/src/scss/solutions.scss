@@ -204,3 +204,82 @@
 .card-3 .underline {
   background-color: $color-black;
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .solutions-image-container {
+    padding: 4px;
+  }
+
+  .solutions-image {
+    border-radius: 16px;
+  }
+
+  .solutions-content {
+    padding: 40px 0 48px;
+    gap: 40px;
+  }
+
+  .solutions-title {
+    font-size: 28px;
+    padding: 0 24px;
+  }
+
+  .card-container {
+    padding: 0 24px;
+    gap: 12px;
+  }
+
+  .card-1 {
+    padding: 24px;
+    height: auto;
+    gap: 16px;
+  }
+
+  .card-1-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card-1-title {
+    font-size: 32px;
+  }
+
+  .card-1-text {
+    font-size: 14px;
+  }
+
+  .card-2-3-container {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-2,
+  .card-3 {
+    width: 100%;
+    height: 220px;
+    padding: 24px;
+    gap: 16px;
+    box-sizing: border-box;
+  }
+
+  .card-2-3-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 48px 0 48px;
+  }
+
+  .solutions-title {
+    padding: 0 48px 0 48px;
+  }
+}

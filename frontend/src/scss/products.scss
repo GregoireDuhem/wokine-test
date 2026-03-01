@@ -152,3 +152,55 @@
 .opacity {
   opacity: 0.5;
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .products-container {
+    inset: 4px;
+    border-radius: 16px;
+    gap: 40px;
+  }
+
+  .products-header {
+    padding: 48px 24px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .products-title {
+    font-size: 28px;
+  }
+
+  .products-cards-container {
+    padding: 0 24px;
+    gap: 16px;
+  }
+
+  .products-card {
+    width: 240px;
+    flex-shrink: 0;
+    gap: 12px;
+  }
+
+  .products-image {
+    width: 220px;
+    height: 220px;
+    padding: 4px 4px 0;
+  }
+
+  .products-card-content {
+    padding: 0 16px 0;
+  }
+
+  .products-card-title {
+    font-size: 15px;
+  }
+
+  .products-card-text {
+    font-size: 13px;
+  }
+
+  .products-arrows {
+    padding: 0 24px 48px;
+  }
+}

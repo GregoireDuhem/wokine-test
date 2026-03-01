@@ -38,7 +38,7 @@ button {
   border-radius: 100px;
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: $breakpoint-tablet) {
   .intro {
     padding: 48px 24px;
   }
