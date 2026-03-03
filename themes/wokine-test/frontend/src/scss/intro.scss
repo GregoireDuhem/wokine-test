@@ -16,6 +16,7 @@
   line-height: 100%;
   letter-spacing: -0.04em;
   width: 50%;
+  display: inline-block;
 }
 
 .intro-text-container {
@@ -26,16 +27,6 @@
   color: $color-black;
   font-size: 18px;
   line-height: 150%;
-}
-
-button {
-  background-color: $color-blue;
-  font-size: 14px;
-  color: $color-white;
-  width: fit-content;
-  padding: 16px 28px;
-  line-height: 22px;
-  border-radius: 100px;
 }
 
 @media (max-width: $breakpoint-tablet) {

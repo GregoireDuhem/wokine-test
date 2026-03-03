@@ -1,4 +1,9 @@
 import "./scss/main.scss";
+import { initTextReveal } from "./components/TextRevealAnimation";
+import { initHeroBgAnimation } from "./components/HeroBgAnimation";
+import { initCardAnimation } from "./components/CardAnimation";
+import { initProductAnimation } from "./components/ProductAnimation";
+import { initButtonHoverAnimation } from "./components/ButtonHoverAnimation";
 console.log("Vite + WordPress OK");
 
 function enableDragScroll(selector) {
@@ -52,4 +57,9 @@ function enableDragScroll(selector) {
 
 document.addEventListener("DOMContentLoaded", () => {
   enableDragScroll(".products-cards-container");
+  initTextReveal();
+  initHeroBgAnimation();
+  initCardAnimation();
+  initProductAnimation();
+  initButtonHoverAnimation();
 });

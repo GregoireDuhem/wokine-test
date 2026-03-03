@@ -1,8 +1,8 @@
 <section class="products">
   <div class="products-container">
     <div class="products-header">
-      <h2 class="products-title">Nos dernières nouveautés</h2>
-      <button>Tous nos produits</button>
+      <h2 class="products-title text-reveal">Nos dernières nouveautés</h2>
+      <button class="animated-button">Tous nos produits</button>
     </div>
     <div class="products-cards-container">
       <?php

@@ -67,12 +67,37 @@ button {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
+  line-height: 100%;
 }
 //
 
 a,
 button {
   cursor: pointer;
+}
+
+button {
+  background-color: $color-blue;
+  font-size: 14px;
+  color: $color-white;
+  width: fit-content;
+  padding: 16px 28px;
+  line-height: 22px;
+  border-radius: 100px;
+}
+
+.animated-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-button-inner {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.animated-button-char {
+  display: inline-block;
 }
 
 // Hide admin bar

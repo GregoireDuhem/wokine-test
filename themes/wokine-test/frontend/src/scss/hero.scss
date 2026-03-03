@@ -12,6 +12,7 @@
   position: absolute;
   inset: 0;
   padding: 6px;
+  transform-origin: top center;
   &::after {
     content: "";
     position: absolute;
@@ -28,6 +29,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 24px 24px 24px 24px;
+  transform-origin: center center;
 }
 
 .hero-content {
@@ -47,7 +49,22 @@
   max-width: 700px;
   text-align: center;
   line-height: 100%;
+  display: inline-block;
   //   letter-spacing: -0.02em; visual adjustment so not using it
+}
+
+.text-reveal {
+  display: inline-block;
+}
+
+.reveal-word {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.reveal-inner {
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 @media (max-width: $breakpoint-mobile) {
