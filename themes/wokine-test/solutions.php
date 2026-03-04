@@ -10,7 +10,9 @@
           <div class="card-1-title">Aenean aliquam</div>
           <div class="card-1-text">Imperdiet faucibus egestas ipsum et mattis. Duis non et justo vestibulum vitae. Tortor tincidunt felis neque congue. In et tempus dignissim ullamcorper eget pellentesque vestibulum pellentesque. Viverra eget elit id eget. Ut cursus sed et massa morbi feugiat. Ac faucibus ante congue nisi a amet elit est. Fermentum.</div>
         </div>
-        <a class="card-1-button"><span class="card-1-button-inner">Voir plus
+        <a class="card-1-button">
+          <span class="card-1-button-inner">
+            Voir plus
             <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="40.96">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -30,7 +32,9 @@
           <div class="card-2-content">
             <h4 class="card-2-3-title">Sed sollicitudin malesuada gravida</h4>
           </div>
-          <a class="card-2-button"><span class="card-2-3-button-inner">Voir plus
+          <a class="card-2-button">
+            <span class="card-2-3-button-inner">
+              Voir plus
               <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="40.96">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -46,7 +50,9 @@
           <div class="card-3-content">
             <h4 class="card-2-3-title">A hendrerit tincidunt elementum a</h4>
           </div>
-          <a class="card-3-button"><span class="card-2-3-button-inner">Voir plus
+          <a class="card-3-button">
+            <span class="card-2-3-button-inner">
+              Voir plus
               <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="40.96">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
