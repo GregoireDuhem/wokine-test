@@ -14,11 +14,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-  <?php get_template_part('hero'); ?>
-  <?php get_template_part('intro'); ?>
-  <?php get_template_part('solutions'); ?>
-  <?php get_template_part('products'); ?>
+  <main id="main-content">
+    <?php get_template_part('hero'); ?>
+    <?php get_template_part('intro'); ?>
+    <?php get_template_part('solutions'); ?>
+    <?php get_template_part('products'); ?>
+  </main>
 
   <!-- <?php
         if (have_posts()) :
