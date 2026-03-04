@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../public/fonts/Satoshi-Medium.woff2") format("woff2"),
+    url("../../public/fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi-bold";
+  src: url("../../public/fonts/Satoshi-Bold.woff2") format("woff2"),
+    url("../../public/fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi-regular";
+  src: url("../../public/fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("../../public/fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+$color-blue: #0c4b78;
+$color-white: #ffffff;
+$color-black: #000e2b;
+
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1024px;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Satoshi";
+  //   overflow-x: hidden;
+}
+
+body {
+  background: $color-white;
+}
+
+// Remove default styling
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: 100%;
+}
+//
+
+a,
+button {
+  cursor: pointer;
+}
+
+button {
+  background-color: $color-blue;
+  font-size: 14px;
+  color: $color-white;
+  width: fit-content;
+  padding: 16px 28px;
+  line-height: 22px;
+  border-radius: 100px;
+}
+
+.animated-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-button-inner {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.animated-button-char {
+  display: inline-block;
+}
+
+// Hide admin bar
+#wpadminbar {
+  display: none !important;
+}
+html {
+  margin-top: 0 !important;
+}
+body.admin-bar {
+  margin-top: 0 !important;
+}
+//
+
+.text-gradient {
+  background: linear-gradient(90deg, #000e2b, #02399f, #000e2b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@import "hero";
+@import "intro";
+@import "solutions";
+@import "products";

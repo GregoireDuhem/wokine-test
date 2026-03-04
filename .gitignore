@@ -1,19 +1,40 @@
-# Dependencies
-frontend/node_modules/
+# Dependencies (reinstall with npm install / composer install)
+node_modules/
+vendor/
 
-# Vite build output
-frontend/dist/
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
 
-# Logs
-*.log
-npm-debug.log*
-frontend/logs/
+# Lock files (uncomment if you don't want to track them)
+# package-lock.json
+# yarn.lock
+# composer.lock
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# IDE & editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Env
-.env
-.env.local
-*.local
+# Logs & temp
+*.log
+npm-debug.log*
+.cache/
+tmp/
+temp/
+
+# Debug
+debug.log
