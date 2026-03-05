@@ -22,3 +22,14 @@ WordPress theme with a custom build setup and front-end tooling.
 5. **Animations** — Added GSAP for scroll and interaction animations.
 6. **Products** — Registered a custom post type in PHP so products can be created and managed in the WP admin.
 7. **Git** - Understanding what files to push on github
+
+## Contenu WordPress (BDD)
+
+- Fichier d’export contenu : `bdd-produits-wokine.xml`
+- Pour l’importer : WP admin > Outils > Importer > WordPress > envoyer ce fichier.
+
+## Front-end (Vite)
+
+- Dans le dossier du thème : `cd wp-content/themes/wokine-test/frontend`
+- Installer les dépendances : `npm install`
+- Lancer le front en dev (Vite) : `npm run dev`
