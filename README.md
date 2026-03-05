@@ -4,7 +4,7 @@ WordPress theme with a custom build setup and front-end tooling.
 
 ## Setup
 
-- WordPress backend (PHP) and front-end (JS/CSS) discovery and structure
+- WordPress backend (PHP) discovery and integration within a structured front-end workflow (JS/CSS).
 - **Vite** for building: compiles PHP/HTML templates and front-end assets (JS, CSS)
 
 ## Features
